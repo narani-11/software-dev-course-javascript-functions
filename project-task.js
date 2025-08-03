@@ -71,39 +71,43 @@ for (let i = 0; i < names.length; i++) {
    - Keep your code clean, readable, and easy to maintain
 */
 
-// ✅ Your refactored code goes below this line!
+//  Refactored Code 
 
-// Script 1 - Greeting multiple users
-function greet(name){
-   console.log("Welcome, " + name + "!");
+// Function to greet a user
+function greetUser(name) {
+    console.log(`Welcome, ${name}!`);
 }
 
-greet("Alice");
-greet("Bob");
-greet("Charlie");
+// Function to calculate and return the sum of two numbers
+function calculateSum(a, b) {
+    return a + b;
+}
 
+// Function to calculate and return the product of two numbers
+function calculateProduct(a, b) {
+    return a * b;
+}
+
+// Function to print all names from a list
+function printNameList(nameArray) {
+    console.log("Names in the list:");
+    for (let i = 0; i < nameArray.length; i++) {
+        console.log(nameArray[i]);
+    }
+}
+
+// Script 1 - Greet multiple users
+let users = ["Alice", "Bob", "Charlie"];
+users.forEach(greetUser);
 
 // Script 2 - Sum calculation
-function sumNums(num1, num2){
-   return num1 + num2;
-
-}
-
-console.log("The sum of " + num1 + " and " + num2 + " is " + sumNums(5,10));
-
+let num1 = 5, num2 = 10;
+let sum = calculateSum(num1, num2);
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);
 
 // Script 3 - Product calculation
-function productNums(num1, num2){
-   return num1 * num2;
-} 
-console.log("The product of " + num1 + " and " + num2 + " is " + productNums(5, 10));
-
+let product = calculateProduct(num1, num2);
+console.log(`The product of ${num1} and ${num2} is ${product}`);
 
 // Script 4 - Print names from a list
-function printNameList(nameArray){
-   for (let i = 0; i < nameArray.length; i++){
-      console.log(nameArray[i]);
-   }
-}
-
-printNameList(["Alice", "Bob", "Charlie"]);
+printNameList(users);
